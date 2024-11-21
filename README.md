@@ -1,1 +1,24 @@
-This project predicts stock price movements by analyzing social media sentiment. It scrapes data from platforms like Twitter, Reddit, or Telegram, performs sentiment analysis, and uses machine learning models (e.g., Random Forest, SVR) to forecast stock trends, evaluating The Stock Movement Analysis Based on Social Media Sentiment project aims to predict stock price movements by analyzing user-generated content from platforms like Twitter, Reddit, or Telegram. The process begins with data scraping, where relevant discussions are extracted using APIs such as Tweepy for Twitter, PRAW for Reddit, or Telethon for Telegram. The collected data undergoes preprocessing to remove noise and handle missing values, ensuring it is suitable for analysis. Sentiment analysis is then performed to determine the polarity of the content (positive, negative, or neutral), providing insights into public opinion. Finally, the processed data is used to train machine learning models that predict stock price trends, with model performance evaluated using metrics like accuracy, precision, and recall. This approach combines the power of web scraping, sentiment analysis, and predictive modeling to draw meaningful connections between social media sentiment and stock market movements.with metrics like RMSE for accuracy.
+# Stock-Prediction-Using-Twitter-Sentiment-Analysis
+
+In this project, I have applied sentiment analysis and two statistical machine learning
+models, Random Forest and Support Vector Regression. These models are used to depict the
+correlation between the tweets which are extracted from twitter and stock market movements of a
+company. We have performed sentiment analysis of the twitter data based on a whole day as well
+as based on an hourly basis to analyze the effect it has on stock market prediction. The models are
+evaluated and compared using RMSE (root mean squared error) values.
+
+An overview of the process flow of our project is as follows:
+1. Data Collection & Parsing: The stock market data is collected using yfinance API and
+tweets are fetched from twitter using GetOldTweets API. In this step the preprocessing of
+the tweets such as removing stop words, hyperlink and other steps are carried out.
+2. Sentiment Analysis: The sentiment analysis of the tweet is carried out using VADER. Here
+each tweet is given a sentiment score which determines if the tweet is positive, negative or
+neutral.
+3. Processing: The rows which have missing values such as price values are further processed.
+The data along with the sentiment scores is divided into train and test data and is fed to the
+model.
+4. Applying Regression Models: To predict stock Market prices, we have used Random
+Forest and Support vector regression models in this project. We will be then using RMSE
+scores to validate the efficiency of our models and to analyze which model works better
+for the used dataset.
+
